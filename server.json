@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "trade.rubin/exchange",
+  "title": "Rubin Exchange",
+  "description": "Rubin: self-custody DEX for crypto perpetuals & spot - trade, read positions, orders, balances.",
+  "version": "1.0.2",
+  "websiteUrl": "https://code.rubin.trade/ai",
+  "repository": {
+    "url": "https://github.com/rubin-trade/rubin-mainnet-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.mainnet.rubin.trade/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer MCP token - mint one on the Rubin exchange at rubin.trade (Trading Keys -> MCP Token).",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
